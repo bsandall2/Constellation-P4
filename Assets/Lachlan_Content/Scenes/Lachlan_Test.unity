@@ -789,6 +789,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 753988885, guid: 13848a04408814b49be4cd9993ae54ec, type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4020983980232809014, guid: 13848a04408814b49be4cd9993ae54ec, type: 3}
       propertyPath: m_Name
       value: Fox_Player

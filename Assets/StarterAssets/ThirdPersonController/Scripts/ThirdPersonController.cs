@@ -116,11 +116,16 @@ namespace StarterAssets
 		private void Update()
 		{
 			_hasAnimator = TryGetComponent(out _animator);
-			
+
 			JumpAndGravity();
-			GroundedCheck();
+			//GroundedCheck();
 			Move();
 		}
+
+		private void FixedUpdate()
+        {
+			GroundedCheck();
+        }
 
 		private void LateUpdate()
 		{
@@ -136,9 +141,10 @@ namespace StarterAssets
 			_animIDMotionSpeed = Animator.StringToHash("MotionSpeed");
 		}
 
-		private void GroundedCheck()
+
+        private void GroundedCheck()
 		{
-			// set sphere position, with offset
+			 // set sphere position, with offset
 			Vector3 spherePosition = new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z);
 			Grounded = Physics.CheckSphere(spherePosition, GroundedRadius, GroundLayers, QueryTriggerInteraction.Ignore);
 
