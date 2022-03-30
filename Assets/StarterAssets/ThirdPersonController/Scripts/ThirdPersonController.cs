@@ -118,8 +118,13 @@ namespace StarterAssets
 			_hasAnimator = TryGetComponent(out _animator);
 			
 			JumpAndGravity();
-			GroundedCheck();
+			//GroundedCheck();
 			Move();
+		}
+
+		private void FixedUpdate()
+        {
+			GroundedCheck();
 		}
 
 		private void LateUpdate()
