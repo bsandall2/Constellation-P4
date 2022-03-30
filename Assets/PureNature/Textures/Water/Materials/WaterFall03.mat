@@ -103,6 +103,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _099: 0.07
     - _BumpScale: 1
@@ -181,7 +182,7 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color0: {r: 0, g: 0.5987654, b: 1, a: 0}
     - _Color1: {r: 1, g: 0.76618373, b: 0, a: 1}
-    - _DepthColor: {r: 0, g: 0.33296344, b: 0.5660378, a: 0.5686275}
+    - _DepthColor: {r: 0.1764706, g: 0.25882354, b: 0.34117648, a: 0.5686275}
     - _DepthColor1: {r: 0.8867924, g: 0.8867924, b: 0.8867924, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _MainColor: {r: 0, g: 0.6810271, b: 0.6886792, a: 1}
@@ -195,3 +196,4 @@ Material:
     - _WavesScale: {r: 1, g: 1, b: 0, a: 0}
     - _WavesScaleOLD: {r: 1, g: 1, b: 0, a: 0}
     - _WavesScaleXY: {r: 0.1, g: 0.1, b: 0, a: 0}
+  m_BuildTextureStacks: []
