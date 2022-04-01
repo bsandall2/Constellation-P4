@@ -12,4 +12,11 @@ public class SettingsMenu : MonoBehaviour
         audioMixer.SetFloat("MasterVolume", volume);
         
     }
+
+    public void SetFullscreen (bool isFullscreen)
+    {
+        if (isFullscreen) Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
+        else Screen.fullScreenMode = FullScreenMode.Windowed;
+    }
+
 }
