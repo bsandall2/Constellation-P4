@@ -4982,6 +4982,7 @@ GameObject:
   - component: {fileID: 4873857708252527080}
   - component: {fileID: 6598584207902922387}
   - component: {fileID: 6384256300031674126}
+  - component: {fileID: 829596968}
   m_Layer: 0
   m_Name: Star
   m_TagString: Untagged
@@ -5078,7 +5079,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6146041c29bac02479a06c5010fdcbf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
+  value: 1
   pickupEffect: {fileID: 4335478583840013409}
   objectToMove: {fileID: 2438319660838644823}
   moveDirection: {x: 0, y: 20, z: 0}
+--- !u!95 &829596968
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8049853357396423597}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dc004b49b52788b49869eec79622a806, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
