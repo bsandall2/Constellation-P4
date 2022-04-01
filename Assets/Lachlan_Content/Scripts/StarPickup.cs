@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StarPickup : MonoBehaviour
 {
-public int value;
+public int value = 1;
 public GameObject pickupEffect;
 
 public GameObject objectToMove;
@@ -40,6 +40,8 @@ public Vector3 moveDirection;
     {
         if (other.CompareTag("Player"))
         {
+            FindObjectOfType<GameManager>().AddStars(value);
+            Destroy(gameObject);
             
             StartCoroutine(LerpPosition(moveDirection, 1));
             //objectToMove.transform.position = Vector3.Lerp(transform.position, moveDirection, 10.0f);
