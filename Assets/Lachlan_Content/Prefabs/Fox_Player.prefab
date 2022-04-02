@@ -886,8 +886,8 @@ MonoBehaviour:
   JumpTimeout: 0.3
   FallTimeout: 0.15
   Grounded: 1
-  GroundedOffset: 0.2
-  GroundedRadius: 0.7
+  GroundedOffset: 1
+  GroundedRadius: 1.5
   GroundLayers:
     serializedVersion: 2
     m_Bits: 513
@@ -896,6 +896,7 @@ MonoBehaviour:
   BottomClamp: -30
   CameraAngleOverride: 0
   LockCameraPosition: 0
+  playerRotation: {fileID: 0}
 --- !u!114 &734703320
 MonoBehaviour:
   m_ObjectHideFlags: 0

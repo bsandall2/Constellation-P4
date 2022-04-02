@@ -59,6 +59,10 @@ namespace StarterAssets
 		[Tooltip("For locking the camera position on all axis")]
 		public bool LockCameraPosition = false;
 
+		[Header("PlayerRotation")]
+		[Tooltip("Player Object that is rotating based on terrain")]
+		public GameObject playerRotation;
+
 		// cinemachine
 		private float _cinemachineTargetYaw;
 		private float _cinemachineTargetPitch;
@@ -230,6 +234,21 @@ namespace StarterAssets
 				_animator.SetFloat(_animIDSpeed, _animationBlend);
 				_animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
 			}
+
+			// Attempt at making the character rotate based on terrain
+			
+			//Ray ray = new Ray();
+			//ray.origin = transform.position;
+			//ray.direction=Vector3.down;
+			//RaycastHit hitInfo;
+
+			//if (Physics.Raycast(ray, out hitInfo))
+			{
+				//playerRotation.transform.position = hitInfo.point;
+				//playerRotation.transform.rotation = Quaternion.FromToRotation(Vector3.forward, hitInfo.normal);
+			}
+			
+
 		}
 
 		private void JumpAndGravity()
