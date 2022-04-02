@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class StarPickup : MonoBehaviour
 {
-public int value;
+public int value = 1;
 public GameObject pickupEffect;
-
-public GameObject objectToMove;
-public Vector3 moveDirection;
+public AudioClip starSound;
 
 // Start is called before the first frame update
     void Start()
@@ -22,31 +20,18 @@ public Vector3 moveDirection;
         
     }
     
-    IEnumerator LerpPosition(Vector3 targetPosition, float duration)
-    {
-        float time = 0;
-        Vector3 startPosition = transform.position;
-        while (time < duration)
-        {
-            transform.position = Vector3.Lerp(startPosition, targetPosition, time / duration);
-            time += Time.deltaTime;
-            yield return null;
-        }
-        transform.position = targetPosition;
-    }
-    
     
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+            FindObjectOfType<GameManager>().AddStars(value);
+            Instantiate(pickupEffect, transform.position, transform.rotation);
+            AudioSource.PlayClipAtPoint(starSound, transform.position);
             
-            StartCoroutine(LerpPosition(moveDirection, 1));
-            //objectToMove.transform.position = Vector3.Lerp(transform.position, moveDirection, 10.0f);
 
-            //Instantiate(pickupEffect, transform.position, transform.rotation);
-
-            //Destroy(gameObject);
+            Destroy(pickupEffect);
+            Destroy(gameObject);
         }
     }
 }
