@@ -5,9 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuScript : MonoBehaviour
 {
-    public void PlayGame()
+    public GameObject fadeBackground;
+    private Animator anim;
+
+    void Start()
     {
-        SceneManager.LoadScene(1);
+        anim = fadeBackground.GetComponent<Animator>();
+    }
+
+    public void PlayGame()
+    {       
+        anim.Play("FadeOUT");
     }
 
     public void ExitGame()

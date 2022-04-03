@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: e2cbb99454ee1d84f9d7e13d7a7b3baf
   - enabled: 1
-    path: Assets/Bryces Content/Plains+Valley.unity
+    path: Assets/Scenes/Plains+Valley.unity
     guid: dca5b73a757831246a5630022504abc2
   - enabled: 1
     path: Assets/Lachlan_Content/Scenes/Mountain+Forest.unity
