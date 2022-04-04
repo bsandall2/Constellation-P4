@@ -44,6 +44,8 @@ namespace StarterAssets
 		public float GroundedOffset = -0.14f;
 		[Tooltip("The radius of the grounded check. Should match the radius of the CharacterController")]
 		public float GroundedRadius = 0.28f;
+		[Tooltip("The radius of the grounded check. Should match the radius of the CharacterController")]
+		public Vector3 GroundedBoxRadius;
 		[Tooltip("What layers the character uses as ground")]
 		public LayerMask GroundLayers;
 
@@ -148,8 +150,11 @@ namespace StarterAssets
 		private void GroundedCheck()
 		{
 			// set sphere position, with offset
-			Vector3 spherePosition = new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z);
-			Grounded = Physics.CheckSphere(spherePosition, GroundedRadius, GroundLayers, QueryTriggerInteraction.Ignore);
+			//Vector3 spherePosition = new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z);
+			//Grounded = Physics.CheckSphere(spherePosition, GroundedRadius, GroundLayers, QueryTriggerInteraction.Ignore);
+
+			Vector3 boxPosition = new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z);
+			Grounded = Physics.CheckBox(boxPosition, GroundedBoxRadius, Quaternion.identity, GroundLayers);
 
 			// update animator if using character
 			if (_hasAnimator)
@@ -236,7 +241,7 @@ namespace StarterAssets
 			}
 
 			// Attempt at making the character rotate based on terrain
-			
+
 			//Ray ray = new Ray();
 			//ray.origin = transform.position;
 			//ray.direction=Vector3.down;
@@ -337,6 +342,7 @@ namespace StarterAssets
 			
 			// when selected, draw a gizmo in the position of, and matching radius of, the grounded collider
 			Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z), GroundedRadius);
+			Gizmos.DrawCube(new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z), GroundedBoxRadius);
 		}
 	}
 }
