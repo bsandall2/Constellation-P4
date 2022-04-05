@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class FadeToNextLevel : MonoBehaviour
 {
+    public int loadNumber;
+
     public void OnFadeComplete()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(loadNumber);
     }
 }
