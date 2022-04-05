@@ -888,7 +888,7 @@ MonoBehaviour:
   Grounded: 1
   GroundedOffset: -0.14
   GroundedRadius: 0.3
-  GroundedBoxRadius: {x: 1.1, y: 0.3, z: 1}
+  GroundedBoxRadius: {x: 0.5, y: 0.5, z: 0.5}
   GroundLayers:
     serializedVersion: 2
     m_Bits: 513
@@ -915,8 +915,8 @@ MonoBehaviour:
   jump: 0
   sprint: 0
   analogMovement: 0
-  cursorLocked: 1
-  cursorInputForLook: 1
+  cursorLocked: 0
+  cursorInputForLook: 0
 --- !u!114 &734703318
 MonoBehaviour:
   m_ObjectHideFlags: 0

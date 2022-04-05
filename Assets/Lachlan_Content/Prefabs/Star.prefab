@@ -5008,6 +5008,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 1
   pickupEffect: {fileID: 998052016133356731}
+  starSound: {fileID: 8300000, guid: cfb3447fb2162ec4a8d07c523a1b22cb, type: 3}
 --- !u!95 &829596968
 Animator:
   serializedVersion: 3

@@ -6,6 +6,7 @@ public class StarPickup : MonoBehaviour
 {
 public int value = 1;
 public GameObject pickupEffect;
+//public GameObject star;
 public AudioClip starSound;
 
 // Start is called before the first frame update
@@ -23,15 +24,21 @@ public AudioClip starSound;
     
     private void OnTriggerEnter(Collider other)
     {
+
         if (other.CompareTag("Player"))
         {
             FindObjectOfType<GameManager>().AddStars(value);
             Instantiate(pickupEffect, transform.position, transform.rotation);
             AudioSource.PlayClipAtPoint(starSound, transform.position);
-            
 
-            Destroy(pickupEffect);
-            Destroy(gameObject);
+            DestroyStar();
+            //Destroy(pickupEffect);
+            //Destroy(gameObject);
         }
+    }
+
+    private void DestroyStar()
+    {
+        Destroy(this.gameObject);
     }
 }

@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
     public GameObject PlayerPause;
+    public GameObject PlayerInput;
 
     void Start()
     {
@@ -37,7 +38,9 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         GameIsPaused = false;
         Cursor.visible = false;
-        PlayerPause.gameObject.GetComponent<ThirdPersonController>().enabled = true;
+        //PlayerPause.gameObject.GetComponent<ThirdPersonController>().enabled = true;
+        //FindObjectOfType<StarterAssetsInputs>().cursorLocked(true);
+        
     }
 
     void Pause()
@@ -46,6 +49,8 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0f;
         GameIsPaused = true;
         Cursor.visible = true;
-        PlayerPause.gameObject.GetComponent<ThirdPersonController>().enabled = false;
+        //PlayerPause.gameObject.GetComponent<ThirdPersonController>().enabled = false;
+        //FindObjectOfType<StarterAssetsInputs>().cursorLocked(false);
+     
     }
 }
