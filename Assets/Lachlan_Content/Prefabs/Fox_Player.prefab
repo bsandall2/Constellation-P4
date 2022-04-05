@@ -888,7 +888,7 @@ MonoBehaviour:
   Grounded: 1
   GroundedOffset: -0.14
   GroundedRadius: 0.3
-  GroundedBoxRadius: {x: 3, y: 0.3, z: 1}
+  GroundedBoxRadius: {x: 1.1, y: 0.3, z: 1}
   GroundLayers:
     serializedVersion: 2
     m_Bits: 513
